@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.mycompany.hr'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web-services'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// https://mvnrepository.com/artifact/org.jdom/jdom
+	// https://mvnrepository.com/artifact/org.jdom/jdom2
+	compile group: 'org.jdom', name: 'jdom2', version: '2.0.6'
+
+
+	//implementation 'org.springframework.ws:spring-ws-core'
+	// https://mvnrepository.com/artifact/jaxen/jaxen
+	compile group: 'jaxen', name: 'jaxen', version: '1.1.6'
+
+}
